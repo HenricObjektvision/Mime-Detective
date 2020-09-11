@@ -102,6 +102,12 @@ namespace MimeDetective
         public readonly static FileType TiffBigEndian = new FileType(new byte?[] { 0x4D, 0x4D, 0, 0x2A }, "tiff", "image/tiff");
         public readonly static FileType TiffBig = new FileType(new byte?[] { 0x4D, 0x4D, 0, 0x2B }, "tiff", "image/tiff");
 
+        public readonly static FileType WebP = new FileType(new byte?[] { 0x52, 0x49, 0x46, 0x46, null, null, null, null, 0x57, 0x45, 0x42, 0x50 }, "webp", "image/webp");
+
+        public readonly static FileType Cr2 = new FileType(new byte?[] { 0x49, 0x49, 0x2A, 0x00, 0x10, 0x00, 0x00, 0x00, 0x43, 0x52 }, "cr2", "image/x-canon-cr2");
+        
+        public readonly static FileType Ps = new FileType(new byte?[] { 0x25, 0x21, 0x50, 0x53 }, "ps", "application/postscript");
+
         #endregion Graphics jpeg, png, gif, bmp, ico, tiff
 
         #region Video
@@ -125,9 +131,19 @@ namespace MimeDetective
         public readonly static FileType Mp4A = new FileType(new byte?[] { 0x66, 0x74, 0x79, 0x70, 0x4D, 0x34, 0x41, 0x20 }, "mp4a,m4a", "audio/mp4", 4);
 
         //FLV	 	Flash video file
-        public readonly static FileType FLV = new FileType(new byte?[] { 0x46, 0x4C, 0x56, 0x01 }, "flv", "application/unknown");
+        public readonly static FileType FLV = new FileType(new byte?[] { 0x46, 0x4C, 0x56, 0x01 }, "flv", "video/x-flv");
 
         public readonly static FileType ThreeGPP2File = new FileType(new byte?[] { 0x66, 0x74, 0x79, 0x70, 0x33, 0x67, 0x70 }, "3gp", "video/3gg", 4);
+
+        public readonly static FileType AVI = new FileType(new byte?[] { 0x52, 0x49, 0x46, 0x46, null, null, null, null, 0x41, 0x56, 0x49, 0x20 }, "avi", "video/x-msvideo", 0);
+
+        public readonly static FileType WMV = new FileType(new byte?[] { 0x30, 0x26, 0xB2, 0x75, 0x8E, 0x66, 0xCF, 0x11 }, "wmv", "video/x-ms-wmv");
+
+        // MKV and WEBM have the same signature, since WEBM is a Matroska file, only more more limited when it comes to what codecs can be used
+        // I've chosen to return the webm ext/mime type, since webm is probably the more widely used format. At least in web projects
+        public readonly static FileType WEBM = new FileType(new byte?[] { 0x1A, 0x45, 0xDF, 0xA3 }, "webm", "video/webm", 0);
+        //public readonly static FileType MKV = new FileType(new byte?[] { 0x1A, 0x45, 0xDF, 0xA3 }, "mkv", "video/x-matroska", 0);
+
 
         #endregion Video
 
@@ -227,8 +243,8 @@ namespace MimeDetective
                 BMP, DLL_EXE, ZIP_7z, GZ_TGZ, TAR_ZH, TAR_ZV, OGG, ICO, XML, XML_NoBom, XML_Utf8Bom, XML_UCS2BE, XML_UCS2LE, DWG, LIB_COFF, PST, PSD, BZ2,
                 AES, SKR, SKR_2, PKR, EML_FROM, ELF, TXT_UTF8, TXT_UTF16_BE, TXT_UTF16_LE, TXT_UTF32_BE, TXT_UTF32_LE,
                 Mp3ID3, Wav, Flac, MIDI,
-                Tiff, TiffLittleEndian, TiffBigEndian, TiffBig,
-                MP4Container, Mp4ISOv1, MovQuickTime, MP4VideoFiles, Mp4QuickTime, Mp4VideoFile, ThreeGPP2File, Mp4A, FLV };
+                Tiff, TiffLittleEndian, TiffBigEndian, TiffBig, WebP, Cr2, Ps,
+                MP4Container, Mp4ISOv1, MovQuickTime, MP4VideoFiles, Mp4QuickTime, Mp4VideoFile, ThreeGPP2File, Mp4A, FLV, WEBM, AVI, WMV };
 
         //public static readonly FileType[] sortedTypes = Types.OrderBy(x => x.Header.Length).ToArray();
 
