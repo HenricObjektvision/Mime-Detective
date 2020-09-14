@@ -245,7 +245,7 @@ namespace MimeDetective
                 BMP, DLL_EXE, ZIP_7z, GZ_TGZ, TAR_ZH, TAR_ZV, OGG, ICO, XML, XML_NoBom, XML_Utf8Bom, XML_UCS2BE, XML_UCS2LE, DWG, LIB_COFF, PST, PSD, BZ2,
                 AES, SKR, SKR_2, PKR, EML_FROM, ELF, TXT_UTF8, TXT_UTF16_BE, TXT_UTF16_LE, TXT_UTF32_BE, TXT_UTF32_LE,
                 Mp3ID3, Wav, Flac, MIDI,
-                Tiff, TiffLittleEndian, TiffBigEndian, TiffBig, WebP, Cr2, Ps,
+                Tiff, TiffLittleEndian, TiffBigEndian, TiffBig, WebP, Cr2, Ps, Heic,
                 MP4Container, Mp4ISOv1, MovQuickTime, MP4VideoFiles, Mp4QuickTime, Mp4VideoFile, ThreeGPP2File, Mp4A, FLV, WEBM, AVI, WMV };
 
         //public static readonly FileType[] sortedTypes = Types.OrderBy(x => x.Header.Length).ToArray();
