@@ -108,6 +108,8 @@ namespace MimeDetective
         
         public readonly static FileType Ps = new FileType(new byte?[] { 0x25, 0x21, 0x50, 0x53 }, "ps", "application/postscript");
 
+        public readonly static FileType Heic = new FileType(new byte?[] { 0x00, 0x00, 0x00, 0x18, 0x66, 0x74, 0x79, 0x70 }, "heic", "image/heic");
+
         #endregion Graphics jpeg, png, gif, bmp, ico, tiff
 
         #region Video

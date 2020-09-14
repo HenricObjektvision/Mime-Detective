@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<ProjectReference Include="..\..\src\Mime-Detective\Mime-Detective-ov.csproj" />
 	<ProjectReference Include="..\..\src\Mime-Detective\Mime-Detective.csproj" />
 	<PackageReference Include="BenchmarkDotNet">
 	  <Version>0.10.14</Version>

@@ -10,17 +10,17 @@
 	<PackageTags>mime, mime detective, file types</PackageTags>
 	<LangVersion>latest</LangVersion>
 	<PackageProjectUrl>https://github.com/HenricObjektvision/Mime-Detective</PackageProjectUrl>
-	<PackageLicenseUrl>https://github.com/clarkis117/Mime-Detective/blob/master/LICENSE</PackageLicenseUrl>
 	<RepositoryType>git</RepositoryType>
 	<RepositoryUrl>https://github.com/HenricObjektvision/Mime-Detective.git</RepositoryUrl>
-	<AssemblyVersion>0.0.6.0</AssemblyVersion>
-	<FileVersion>0.0.6.0</FileVersion>
+	<AssemblyVersion>0.0.6.1</AssemblyVersion>
+	<FileVersion>0.0.6.1</FileVersion>
 	<PackageReleaseNotes>A fork of clarkis117/Mime-Detective, with added mime types for video and pictures</PackageReleaseNotes>
-	<Version>0.0.6.0-beta5</Version>
+	<Version>0.0.6.1</Version>
     <!--Needed to allow usage of fixed sized buffers-->
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company>Objektvision</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net45'">
@@ -33,6 +33,13 @@
         
   <ItemGroup>
 	<PackageReference Include="System.Buffers" Version="4.*" />
+  </ItemGroup>
+        
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

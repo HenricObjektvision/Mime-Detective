@@ -20,7 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{17C4E0DE-B86
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A50202E7-0386-4EB3-B09C-00EFCAE360F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mime-Detective", "src\Mime-Detective\Mime-Detective.csproj", "{40608F32-BF6E-4DE4-85AE-EF71C69EF18D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mime-Detective", "src\Mime-Detective\Mime-Detective-ov.csproj", "{40608F32-BF6E-4DE4-85AE-EF71C69EF18D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mime-Detective.Benchmarks", "test\Mime-Detective.Benchmarks\Mime-Detective.Benchmarks.csproj", "{7F622459-3B42-4393-A08D-BEB47432628A}"
 EndProject
